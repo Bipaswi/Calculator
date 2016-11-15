@@ -1,0 +1,311 @@
+--Integer Print--
+42
+--List Print--
+[41, 42, 43]
+--Nested List Print--
+[4.1, 42, 43, [41, 42, 43]]
+--Integer File--
+42
+--List File--
+[41, True, 43]
+--Float File--
+[0.0, 1.0, 0.5, -1.0, 19487171.0, 5.1315811823070673e-08, -19487171.0, -5.1315811823070673e-08]
+--Matrix File--
+1 2 3  42 5 6  0 -1 -100  
+--Complex File--
+2/3 5/4j
+--Rational File--
+[1, <OMTypes.Rational object at 0x7fa52199d908>]
+--unary_minus.xml File--
+-10
+--lcm.xml File--
+10.0
+--plus.xml File--
+9
+--minus.xml File--
+1
+--gcd.xml File--
+2
+--times.xml File--
+40
+--divide.xml File--
+2.0
+--power.xml File--
+625
+--abs.xml File--
+42
+--root.xml File--
+4.013799001275562
+--plus.xml File--
+9
+--sum.xml File--
+153
+--product.xml File--
+6658606584104736522240000000
+--String Creation And Parsing--
+Hello world
+--OMPrint Integer--
+<?xml version="1.0" ?>
+<OMOBJ>
+    <OMI>42</OMI>
+</OMOBJ>
+
+--OMPrint List--
+<?xml version="1.0" ?>
+<OMOBJ>
+    <OMA>
+        <OMS cd="list1" name="list"/>
+        <OMI>1</OMI>
+        <OMI>2</OMI>
+        <OMI>3</OMI>
+    </OMA>
+</OMOBJ>
+
+--OMPrint String--
+<?xml version="1.0" ?>
+<OMOBJ>
+    <OMA>
+        <OMS cd="list1" name="list"/>
+        <OMI>1</OMI>
+        <OMI>2</OMI>
+        <OMA>
+            <OMS cd="list1" name="list"/>
+            <OMI>3</OMI>
+            <OMI>4</OMI>
+            <OMI>5</OMI>
+        </OMA>
+    </OMA>
+</OMOBJ>
+
+--Equality True--
+True
+True
+True
+--Equality False
+--Booleans--
+<?xml version="1.0" ?>
+<OMOBJ>
+    <OMS cd="logic1" name="true"/>
+</OMOBJ>
+
+<?xml version="1.0" ?>
+<OMOBJ>
+    <OMS cd="logic1" name="false"/>
+</OMOBJ>
+
+--complex--
+<?xml version="1.0" ?>
+<OMOBJ>
+    <OMA>
+        <OMS cd="complex1" name="complex_cartesian"/>
+        <OMF>5.0</OMF>
+        <OMF>5.0</OMF>
+    </OMA>
+</OMOBJ>
+
+--Output python dictionary
+<?xml version="1.0" ?>
+<OMOBJ>
+    <OMA>
+        <OMS cd="python" name="dict"/>
+        <OMA>
+            <OMS cd="python" name="keyval"/>
+            <OMSTR>Age</OMSTR>
+            <OMI>7</OMI>
+        </OMA>
+        <OMA>
+            <OMS cd="python" name="keyval"/>
+            <OMSTR>Name</OMSTR>
+            <OMSTR>Zara</OMSTR>
+        </OMA>
+        <OMA>
+            <OMS cd="python" name="keyval"/>
+            <OMSTR>Class</OMSTR>
+            <OMSTR>First</OMSTR>
+        </OMA>
+    </OMA>
+</OMOBJ>
+
+--Dictionary with dupes--
+Parse error: NonHashableTypeError("Can't use unhashable type as key to dictionary",)
+None
+
+--Server Test--
+Sending:  <OMOBJ> <OMA> <OMS cd="list1" name="list"/> <OMI>41</OMI> <OMI>42</OMI> <OMI>43</OMI> </OMA> </OMOBJ> 
+
+Received: <OMOBJ><OMA><OMS cd="list1" name="list" /><OMI>41</OMI><OMI>42</OMI><OMI>43</OMI></OMA></OMOBJ>
+
+Sending:  <OMOBJ> <OMA> <OMS cd="list1" name="list"/> <OMI>41 <OMI>42</OMI> <OMI>43</OMI> </OMA> </OMOBJ> 
+
+Received: Error in parse tree
+
+Sending:  <OMOBJ> <OMA> <OMS cd="arith1" name="power"/> <OMI> 5 </OMI> <OMI> 4 </OMI> </OMA> </OMOBJ> 
+
+Received: <OMOBJ><OMI>625</OMI></OMOBJ>
+
+Sending:  <OMOBJ> <OMA> <OMS cd="interval1" name="integer_interval"/> <OMI>-10</OMI> <OMI>10</OMI> </OMA> </OMOBJ> 
+
+Received: Cannot encode type
+
+--Testing Matrix--
+<?xml version="1.0" ?>
+<OMOBJ>
+    <OMA>
+        <OMS cd="linalg2" name="matrixrow"/>
+        <OMI>2</OMI>
+        <OMI>3</OMI>
+        <OMI>4</OMI>
+        <OMI>5</OMI>
+    </OMA>
+</OMOBJ>
+
+<?xml version="1.0" ?>
+<OMOBJ>
+    <OMA>
+        <OMS cd="linalg2" name="matrix"/>
+        <OMA>
+            <OMS cd="linalg2" name="matrixrow"/>
+            <OMI>2</OMI>
+            <OMI>3</OMI>
+            <OMI>4</OMI>
+            <OMI>5</OMI>
+        </OMA>
+        <OMA>
+            <OMS cd="linalg2" name="matrixrow"/>
+            <OMI>4</OMI>
+            <OMI>5</OMI>
+            <OMI>6</OMI>
+            <OMI>7</OMI>
+        </OMA>
+    </OMA>
+</OMOBJ>
+
+
+--lcm--
+<?xml version="1.0" ?>
+<OMOBJ>
+    <OMF>40.0</OMF>
+</OMOBJ>
+
+--gcd--
+<?xml version="1.0" ?>
+<OMOBJ>
+    <OMI>4</OMI>
+</OMOBJ>
+
+--plus--
+<?xml version="1.0" ?>
+<OMOBJ>
+    <OMI>10</OMI>
+</OMOBJ>
+
+--unary minus--
+<?xml version="1.0" ?>
+<OMOBJ>
+    <OMI>-5</OMI>
+</OMOBJ>
+
+--minus--
+<?xml version="1.0" ?>
+<OMOBJ>
+    <OMI>5</OMI>
+</OMOBJ>
+
+--times--
+<?xml version="1.0" ?>
+<OMOBJ>
+    <OMI>25</OMI>
+</OMOBJ>
+
+--divide--
+<?xml version="1.0" ?>
+<OMOBJ>
+    <OMF>15.0</OMF>
+</OMOBJ>
+
+--power--
+<?xml version="1.0" ?>
+<OMOBJ>
+    <OMI>3125</OMI>
+</OMOBJ>
+
+--abs--
+<?xml version="1.0" ?>
+<OMOBJ>
+    <OMI>1</OMI>
+</OMOBJ>
+
+--root--
+<?xml version="1.0" ?>
+<OMOBJ>
+    <OMF>4.013799001275562</OMF>
+</OMOBJ>
+
+--Input python dictionary
+{'Class': 'First', 'Name': 'Zara', 'Age': 7}
+--Dictionary with unhashable keys
+Parse error: NonHashableTypeError("Can't use unhashable type as key to dictionary",)
+None
+--Factorial input
+3628800
+--Equality operator
+4 <built-in function eq> 5.0
+False
+<?xml version="1.0" ?>
+<OMOBJ>
+    <OMA>
+        <OMS cd="relation1" name="eq"/>
+        <OMI>1</OMI>
+        <OMI>2</OMI>
+    </OMA>
+</OMOBJ>
+
+--LEQ operator
+4 <built-in function le> 5.0
+True
+<?xml version="1.0" ?>
+<OMOBJ>
+    <OMA>
+        <OMS cd="relation1" name="leq"/>
+        <OMI>1</OMI>
+        <OMI>2</OMI>
+    </OMA>
+</OMOBJ>
+
+--OM errors
+Error(error.unsupported_CD, sdfjga.Hello poppet)
+error.unsupported_CD
+<?xml version="1.0" ?>
+<OMOBJ>
+    <OME>
+        <OMS cd="error" name="unsupported_CD"/>
+        <OMS cd="sdfjga" name="Hello poppet"/>
+    </OME>
+</OMOBJ>
+
+--OM error generation
+Error(error.unsupported_CD, ;sakhfadsfh.skfdjhslsf)
+error.unsupported_CD
+<?xml version="1.0" ?>
+<OMOBJ>
+    <OME>
+        <OMS cd="error" name="unsupported_CD"/>
+        <OMS cd=";sakhfadsfh" name="skfdjhslsf"/>
+    </OME>
+</OMOBJ>
+
+--OM attribution
+Attribution({<OMTypes.OMSymbol object at 0x7fa521491c18>: 77.34, <OMTypes.OMSymbol object at 0x7fa521491c50>: 42}, Jack Cole Building)
+<?xml version="1.0" ?>
+<OMOBJ>
+    <OMATTR>
+        <OMATP>
+            <OMS cd="stuff" name="things"/>
+            <OMF>77.34</OMF>
+            <OMS cd="foo" name="bar"/>
+            <OMI>42</OMI>
+        </OMATP>
+        <OMSTR>Jack Cole Building</OMSTR>
+    </OMATTR>
+</OMOBJ>
+

@@ -1,0 +1,6 @@
+Readme
+
+To run the file. go to the directory of the folder and type in:
+- "python3 demo.py" to run the demo file
+- "python3 openmathserver.py" to run the server
+- "python3 openmathScript.py" to run the python script that sums a list

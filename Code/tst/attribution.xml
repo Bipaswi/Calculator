@@ -1,0 +1,11 @@
+<OMOBJ>
+	<OMATTR>
+		<OMATP>
+			<OMS cd="foo" name="bar" />
+			<OMI>42</OMI>
+			<OMS cd="stuff" name="things" />
+			<OMF dec="77.34" />
+		</OMATP>
+		<OMSTR>Jack Cole Building</OMSTR>
+	</OMATTR>
+</OMOBJ>

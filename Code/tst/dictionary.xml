@@ -1,0 +1,32 @@
+<OMOBJ>
+	<OMA>
+		<OMS cd="python" name="dict"/>
+		<OMA>
+			<OMS cd="python" name="keyval"/>
+			<OMI>42</OMI>
+			<OMSTR>Hello World</OMSTR>
+		</OMA>
+		<OMA>
+			<OMS cd="python" name="keyval"/>
+			<OMI>42</OMI>
+			<OMSTR>It's the meaning of life</OMSTR>
+		</OMA>
+		<OMA>
+			<OMS cd="python" name="keyval"/>
+			<OMA>
+                <OMS cd="python" name="dict"/>
+                <OMA>
+					<OMS cd="python" name="keyval"/>
+					<OMI>42</OMI>
+					<OMSTR>Hello World</OMSTR>
+				</OMA>
+				<OMA>
+					<OMS cd="python" name="keyval"/>
+					<OMI>42</OMI>
+					<OMSTR>It's the meaning of life</OMSTR>
+				</OMA>
+	        </OMA>
+			<OMSTR>It's the meaning of life</OMSTR>
+		</OMA>
+	</OMA>
+</OMOBJ>
